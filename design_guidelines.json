@@ -1,0 +1,168 @@
+{
+  "project_name": "GuardianX Enterprise: Autonomous High-Rise Life Safety & InsurTech Command Center",
+  "app_type": "dashboard (enterprise command center / SOC tactical dashboard)",
+  "theme": {
+    "mode": "dark",
+    "background_base": "#0b0f19",
+    "surface_card": "rgba(15, 23, 42, 0.75)",
+    "surface_card_border": "rgba(51, 65, 85, 0.6)",
+    "colors": {
+      "bg_slate": "#0b0f19",
+      "emergency_red": "#ef4444",
+      "emergency_red_glow": "rgba(239, 68, 68, 0.3)",
+      "cyan_accent": "#06b6d4",
+      "cyan_glow": "rgba(6, 182, 212, 0.25)",
+      "emerald_green": "#10b981",
+      "emerald_glow": "rgba(16, 185, 129, 0.25)",
+      "warning_amber": "#f59e0b",
+      "muted_slate": "#64748b",
+      "text_primary": "#f8fafc",
+      "text_secondary": "#94a3b8"
+    }
+  },
+  "typography": {
+    "font_family_heading": "Outfit, system-ui, sans-serif",
+    "font_family_body": "Inter, system-ui, sans-serif",
+    "font_family_mono": "JetBrains Mono, Roboto Mono, monospace",
+    "sizes": {
+      "app_title": "text-xl font-bold tracking-wider uppercase",
+      "kpi_value": "text-2xl lg:text-3xl font-black font-mono tracking-tight",
+      "section_heading": "text-lg font-semibold tracking-wide uppercase",
+      "badge": "text-xs font-mono font-bold tracking-widest uppercase",
+      "body": "text-sm text-slate-300"
+    }
+  },
+  "layout_and_structure": {
+    "container": "min-h-screen bg-[#0b0f19] text-slate-100 font-sans antialiased flex flex-col p-4 md:p-6 gap-6",
+    "header_bar": {
+      "wrapper": "flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-slate-900/80 backdrop-blur-xl border border-slate-800 shadow-2xl",
+      "status_badge": "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold animate-pulse",
+      "view_switcher": "flex items-center bg-slate-950/80 p-1.5 rounded-lg border border-slate-800",
+      "toggle_button_active": "px-4 py-2 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-bold tracking-wider transition-all duration-200 shadow-[0_0_12px_rgba(6,182,212,0.2)]",
+      "toggle_button_inactive": "px-4 py-2 rounded-md text-slate-400 hover:text-slate-200 text-xs font-mono font-medium transition-all duration-200",
+      "action_button": "px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-mono font-bold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-200 active:scale-95 flex items-center gap-2"
+    },
+    "kpi_banner": {
+      "grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4",
+      "card_critical": "p-5 rounded-xl bg-slate-900/70 backdrop-blur-md border border-red-500/40 shadow-[0_0_15px_rgba(239,68,68,0.15)] flex flex-col justify-between relative overflow-hidden",
+      "card_warning": "p-5 rounded-xl bg-slate-900/70 backdrop-blur-md border border-amber-500/40 shadow-[0_0_15px_rgba(245,158,11,0.15)] flex flex-col justify-between relative overflow-hidden",
+      "card_cyan": "p-5 rounded-xl bg-slate-900/70 backdrop-blur-md border border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.15)] flex flex-col justify-between relative overflow-hidden",
+      "card_emerald": "p-5 rounded-xl bg-slate-900/70 backdrop-blur-md border border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.15)] flex flex-col justify-between relative overflow-hidden"
+    },
+    "view_1_tactical_command": {
+      "wrapper": "grid grid-cols-1 lg:grid-cols-12 gap-6",
+      "camera_matrix_container": "lg:col-span-7 xl:col-span-7 flex flex-col gap-4 p-5 rounded-xl bg-slate-900/60 backdrop-blur-xl border border-slate-800",
+      "camera_grid": "grid grid-cols-1 sm:grid-cols-2 gap-4",
+      "camera_feed_box": "relative aspect-video rounded-lg overflow-hidden bg-slate-950 border border-slate-800 group hover:border-slate-700 transition-all shadow-inner",
+      "triage_queue_container": "lg:col-span-5 xl:col-span-5 flex flex-col gap-4 p-5 rounded-xl bg-slate-900/60 backdrop-blur-xl border border-slate-800"
+    },
+    "view_2_executive_insurtech": {
+      "wrapper": "flex flex-col gap-6",
+      "financial_cards_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4",
+      "interactive_slider_section": "p-6 rounded-xl bg-slate-900/70 backdrop-blur-xl border border-cyan-500/30 flex flex-col gap-6 shadow-[0_0_30px_rgba(6,182,212,0.1)]"
+    }
+  },
+  "interactive_components": {
+    "camera_feeds": [
+      {
+        "id": "cam-1402",
+        "name": "Cam 1402 Conference",
+        "floor": "Floor 14",
+        "hazards": ["Fire Detected", "Thermal Anomaly"],
+        "status": "Critical",
+        "timestamp": "LIVE"
+      },
+      {
+        "id": "cam-1405",
+        "name": "Cam 1405 Breakroom",
+        "floor": "Floor 14",
+        "hazards": ["Dense Smoke", "Occupant Trapped"],
+        "status": "Critical",
+        "timestamp": "LIVE"
+      },
+      {
+        "id": "cam-1410",
+        "name": "Cam 1410 Server Room",
+        "floor": "Floor 14",
+        "hazards": ["Heat Spike 185°F"],
+        "status": "Warning",
+        "timestamp": "LIVE"
+      },
+      {
+        "id": "cam-1412",
+        "name": "Cam 1412 Corridor",
+        "floor": "Floor 14",
+        "hazards": ["Human Detected (1 Moving)"],
+        "status": "Clear/Active",
+        "timestamp": "LIVE"
+      }
+    ],
+    "triage_queue": [
+      {
+        "tier": "Tier 1 - Critical",
+        "room": "Room 1405 (Breakroom)",
+        "occupants": 2,
+        "hazards": "Active Flame & Heavy Smoke",
+        "urgency_score": "98/100",
+        "action": "Authorize SAR Dispatch"
+      },
+      {
+        "tier": "Tier 2 - High",
+        "room": "Room 1402 (Conference Room A)",
+        "occupants": 1,
+        "hazards": "Smoke Accumulation & Thermal Spike",
+        "urgency_score": "84/100",
+        "action": "Authorize SAR Dispatch"
+      },
+      {
+        "tier": "Tier 3 - Moderate",
+        "room": "Room 1410 (Server Room)",
+        "occupants": 0,
+        "hazards": "Temperature Elevation (185°F)",
+        "urgency_score": "52/100",
+        "action": "Monitor Sensors"
+      },
+      {
+        "tier": "Tier 4 - Clear",
+        "room": "Room 1412 (North Corridor)",
+        "occupants": 0,
+        "hazards": "Clear Path / Verified Safe",
+        "urgency_score": "05/100",
+        "action": "Verified Clear"
+      }
+    ]
+  },
+  "testing_and_data_attributes": {
+    "guideline": "ALL interactive buttons, inputs, tabs, modal controls, and key metric displays MUST include data-testid in kebab-case format.",
+    "required_data_testids": [
+      "app-header-title",
+      "live-status-badge",
+      "view-toggle-tactical",
+      "view-toggle-executive",
+      "simulate-incident-button",
+      "kpi-active-alarms",
+      "kpi-occupants-located",
+      "kpi-triage-latency",
+      "kpi-annual-savings",
+      "cctv-feed-cam-1402",
+      "cctv-feed-cam-1405",
+      "cctv-feed-cam-1410",
+      "cctv-feed-cam-1412",
+      "authorize-sar-dispatch-button",
+      "insurance-premium-slider",
+      "calculated-discount-amount",
+      "export-underwriting-packet-button"
+    ]
+  },
+  "image_urls": {
+    "cctv_fire_alarm": "https://images.unsplash.com/photo-1743698205310-cd814a95afab?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "cctv_camera_close": "https://images.unsplash.com/photo-1722405375190-8d0b2a765840?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Ensure dark mode glassmorphism theme using slate #0b0f19 base with glowing borders and backdrop filters.",
+    "Support full stateful simulation when 'Simulate Incident (Floor 14)' is clicked (triggers live alert banner, visual camera hazard pulses, SAR dispatch modal, and audio/toast notification).",
+    "Implement the interactive insurance premium slider ($200k to $2M) with real-time 20% discount calculation in Executive InsurTech & ROI view.",
+    "Provide modal/toast for 'Export Underwriting Risk Packet' and 'Authorize SAR Dispatch' actions.",
+    "Ensure seamless responsive switching between Tactical Command and Executive InsurTech views."
+  ]
+}
